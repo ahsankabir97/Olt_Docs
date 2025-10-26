@@ -26,7 +26,7 @@
         }
 	h2 {
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-weight: 400;
             color: #1A1DDB;
             margin-bottom: 5px;
@@ -341,6 +341,7 @@
             
             .olt-table td:nth-of-type(1):before { content: "OLT Name:"; }
             .olt-table td:nth-of-type(2):before { content: "OLT IP:"; }
+	    .olt-table td:nth-of-type(3):before { content: "Uplink Port:"; }
         }
     </style>
 </head>
@@ -364,7 +365,7 @@
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
                 <select class="olt-bts-select" id="olt-bts-select" onchange="filterOltIps()">
                     <option value="all">All BTS</option>
-                    <option value="Malek Mension BTS">Malek Mension BTS</option>
+                    <option value="Malek Mansion BTS">Malek Mansion BTS</option>
                     <option value="Dilkusha BTS">Dilkusha BTS</option>
                     <option value="Jatrabari BTS">Jatrabari BTS</option>
                     <option value="Wari BTS">Wari BTS</option>
@@ -380,92 +381,115 @@
                     <tr>
                         <th>OLT Name</th>
                         <th>OLT IP</th>
+			<th>Uplink Port</th>
                     </tr>
                 </thead>
                 <tbody id="olt-ip-table-body">
-                    <tr data-bts="Malek Mension BTS">
+                    <tr data-bts="Malek Mansion BTS">
                         <td data-label="OLT Name">Malek_FHNET_07</td>
                         <td data-label="OLT IP">10.49.10.58</td>
+			<td data-label="Uplink Port">100.64.167.14 [Eth1/28]</td>
                     </tr>
-                    <tr data-bts="Malek Mension BTS">
+                    <tr data-bts="Malek Mansion BTS">
                         <td data-label="OLT Name">Malek_UTS_08</td>
                         <td data-label="OLT IP">10.49.10.57</td>
+			<td data-label="Uplink Port">100.64.167.14 [Eth1/30]</td>
                     </tr>
-                    <tr data-bts="Malek Mension BTS">
+                    <tr data-bts="Malek Mansion BTS">
                         <td data-label="OLT Name">Malek_CDATA_01</td>
                         <td data-label="OLT IP">10.49.10.162</td>
+			<td data-label="Uplink Port">100.64.167.14 [Eth1/31]</td>
                     </tr>
-                    <tr data-bts="Malek Mension BTS">
+                    <tr data-bts="Malek Mansion BTS">
                         <td data-label="OLT Name">Malek_VSOL_02</td>
                         <td data-label="OLT IP">10.49.10.166</td>
+			<td data-label="Uplink Port">100.64.167.14 [Eth1/7]</td>
                     </tr>
-                    <tr data-bts="Malek Mension BTS">
+                    <tr data-bts="Malek Mansion BTS">
                         <td data-label="OLT Name">Malek_ATOP_03</td>
                         <td data-label="OLT IP">10.49.15.138</td>
+			<td data-label="Uplink Port">100.64.167.14 [Eth1/13]</td>
                     </tr>
-                    <tr data-bts="Malek Mension BTS">
+                    <tr data-bts="Malek Mansion BTS">
                         <td data-label="OLT Name">Malek_VSOL_04</td>
                         <td data-label="OLT IP">10.49.15.126</td>
+			<td data-label="Uplink Port">100.64.167.14 [Eth1/8]</td>
                     </tr>
                     <tr data-bts="Dilkusha BTS">
                         <td data-label="OLT Name">Dilkusha_CDATA_01</td>
                         <td data-label="OLT IP">10.49.8.26</td>
+			<td data-label="Uplink Port">10.48.2.82 [Gi0/6]</td>
                     </tr>
                     <tr data-bts="Jatrabari BTS">
                         <td data-label="OLT Name">Jatrabari_ATOP_01</td>
                         <td data-label="OLT IP">10.49.9.62</td>
+			<td data-label="Uplink Port">100.64.168.58 [GE0/0/15]</td>
                     </tr>
                     <tr data-bts="Wari BTS">
                         <td data-label="OLT Name">Wari_CDATA_01</td>
                         <td data-label="OLT IP">10.49.8.84</td>
+			<td data-label="Uplink Port">100.64.168.66 [GE0/0/2]</td>
                     </tr>
-JB BTS                    <tr data-bts="Segunbagicha BTS">
+	                <tr data-bts="Segunbagicha BTS">
                         <td data-label="OLT Name">Segun_CDATA_01</td>
                         <td data-label="OLT IP">10.49.10.130</td>
+			<td data-label="Uplink Port">10.66.9.250 [Eth1/29]</td>
+
                     </tr>
                     <tr data-bts="Segunbagicha BTS">
                         <td data-label="OLT Name">Segun_CDATA_02</td>
                         <td data-label="OLT IP">10.49.10.131</td>
+			<td data-label="Uplink Port">10.66.9.250 [Eth1/43]</td>
                     </tr>
                     <tr data-bts="Segunbagicha BTS">
                         <td data-label="OLT Name">Segun_CDATA_03</td>
                         <td data-label="OLT IP">10.49.10.132</td>
+			<td data-label="Uplink Port">10.66.9.250 [Eth1/33]</td>
                     </tr>
                     <tr data-bts="Segunbagicha BTS">
                         <td data-label="OLT Name">Segun_CDATA_18</td>
                         <td data-label="OLT IP">10.49.10.150</td>
+			<td data-label="Uplink Port">10.66.9.250 [Eth1/27]</td>
                     </tr>
                     <tr data-bts="Segunbagicha BTS">
                         <td data-label="OLT Name">Segun_CDATA_19</td>
                         <td data-label="OLT IP">10.49.10.151</td>
+			<td data-label="Uplink Port">10.66.9.250 [Eth1/28]</td>
                     </tr>
                     <tr data-bts="Segunbagicha BTS">
                         <td data-label="OLT Name">Segun_CDATA_20</td>
                         <td data-label="OLT IP">10.49.10.152</td>
-                    </tr>
-                    <tr data-bts="Eskaton BTS">
-                        <td data-label="OLT Name">Eskaton_CDATA_02</td>
-                        <td data-label="OLT IP">10.49.10.171</td>
+			<td data-label="Uplink Port">10.66.9.250 [Eth1/32]</td>
                     </tr>
                     <tr data-bts="Eskaton BTS">
                         <td data-label="OLT Name">Eskaton_CDATA_01</td>
                         <td data-label="OLT IP">10.49.10.172</td>
+			<td data-label="Uplink Port">10.66.1.250 [Eth1/18]</td>
+		    </tr>
+                    <tr data-bts="Eskaton BTS">
+                        <td data-label="OLT Name">Eskaton_CDATA_02</td>
+                        <td data-label="OLT IP">10.49.10.171</td>
+			<td data-label="Uplink Port">10.66.1.250 [Eth1/21]</td>
                     </tr>
                     <tr data-bts="Eskaton BTS">
                         <td data-label="OLT Name">Eskaton_CDATA_03</td>
                         <td data-label="OLT IP">10.49.10.173</td>
+			<td data-label="Uplink Port">10.66.1.250 [Eth1/19]</td>
                      </tr>
                     <tr data-bts="Imamganj BTS">
                         <td data-label="OLT Name">Imamgonj_PHY_01</td>
                         <td data-label="OLT IP">10.49.8.90</td>
+			<td data-label="Uplink Port">10.66.61.2 [Gi0/50]</td>
                     </tr>
                     <tr data-bts="Imamganj BTS">
                         <td data-label="OLT Name">Imamgonj_UTS_03</td>
                         <td data-label="OLT IP">10.49.8.91</td>
+			<td data-label="Uplink Port">10.66.61.2 [Gi0/52]</td>
                     </tr>
                     <tr data-bts="Imamganj BTS">
                         <td data-label="OLT Name">Imamgonj_FHNT_04</td>
                         <td data-label="OLT IP">10.49.11.110</td>
+			<td data-label="Uplink Port">10.66.61.2 [Gi0/51]</td>
                     </tr>
                     <tr data-bts="Shahjahanpur BTS">
                         <td data-label="OLT Name">Shahjhnpur_CDTA_1</td>
